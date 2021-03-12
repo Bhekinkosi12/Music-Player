@@ -18,11 +18,18 @@ namespace MusicPlayer.View
          InitializeComponent();
       }
 
+
+
+
+
       protected async override void OnAppearing()
       {
+      
          base.OnAppearing();
          await ((MusicPageViewModel)BindingContext).GetRadialBackground();  
          await ((MusicPageViewModel)BindingContext).GetSongs();
+         
+         
       }
    }
 }
